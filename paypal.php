@@ -56,6 +56,9 @@ switch ($_GET['action']) {
 			$p->add_field('notify_url', $this_script.'?action=ipn');
 			$p->add_field('item_name', 'Paypal Test Transaction');
 			$p->add_field('cmd', '_donations');
+			 //  $p->add_field('cmd', "_cart");
+              //  $p->add_field('cmd', '_xclick');
+                 // $p->add_field('currency_code', 'GBP');
 			$p->add_field('rm', '2');	// Return method = POST
  
       $p->submit_paypal_post(); // submit the fields to paypal
